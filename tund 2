@@ -1,1 +1,47 @@
+Need mudelid ehk OS-i mudel, need on kihiti:
+
+-programming language (VM), library(HTTP)
+-IP    või   TCP/IP      (TCP lisab, et suva kas kood õige v vale aga läheb edasi ikka)
+-Windows API (sockets,winsock)
+
+open(), close(), write(byte[]), byte[] read()
+serializing, deserializing
+encoding, decoding
+
+Üle interneti saame saata vaid numbreid ja märke, mitte teksti, tuleb teha array
+
+-Windows API (driver, network adapter)
+-network adaptr microchip
+
+
+
+
+
+CLIENT & SERVER:
+
+klient alustab suhtlemist- "enter message" ehk connectib ka ip-ga
+serveris on "client is connected", "listener" ja ka bind + IP
+
+tcp ja ip näitavad, et tegu on internetiga
+
+
+KOLM ANDMESTRUKTUURI:
+-list
+-stack
+-map/dictionary
+
+
+
+
+ÜLESANDED JA AJAKAVA:
+*vebruari lopuks esimene yl valmis
+*teine yl martsi kolmveerandiks valmis
+*kolmas yl aprilli kolmveerandiks valmis
+*neljas yl mai lopuks valmis
+
+HTTPS://GITHUB.COM/TIMOTR/HARJUTUSED
+
+
+
+
 
