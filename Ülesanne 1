@@ -1,0 +1,43 @@
+import requests
+import json
+
+
+'''Tallinna koordinaadid'''
+latitude = 59.437
+longitude = 24.7535
+
+'''lisasin siia api urli, mis siis fikseerib tallinna laiuse ja pikkuse'''
+api_url = f"https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.437&lon=24.7535"
+
+
+'''See näitab, mida me kasutame, ehk weatherappi'''
+headers = {
+    "User": "WeatherApp"
+}
+
+
+''' Kasutame requests.get() meetodit, et teha get-päring serverisse määratud URL-ile ehk api_urlile, andes kaasa ka päised, mis sisaldavad teavet rakenduse kohta'''
+response = requests.get(api_url, headers=headers)
+
+
+'''Kui HTTP vastuse staatuskood on 200, siis tähendab see, et päring õnnestus'''
+if response.status_code == 200:
+    '''Server saadab vastuseks andmeid, mis võivad olla näiteks JSON-formaadis ja see teisendab JSON stringi Python sõnastikuks'''
+    data = response.json()
+else:
+    '''Annab ebaõnnestunud staatus koodi näitks 404,505 jne'''
+    print(f"Päring ebaõnnestus. Staatuse kood: {response.status_code}")
+
+
+'''timeseries sisaldab kõiki ajapunktide andmte loendit'''
+timeseries = data['properties']['timeseries']
+
+'''läbime iga ajapunkti'''
+for entry in timeseries:
+    
+    '''kuupäev ja temperatuur'''
+    time = entry['time']
+    '''võtab andmed nagu data,instant,details ja temperatuur'''
+    temperature = entry['data']['instant']['details']['air_temperature']
+    
+    print(time, temperature, "C")
