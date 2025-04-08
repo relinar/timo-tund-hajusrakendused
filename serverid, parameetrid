@@ -1,0 +1,31 @@
+Miks me servereid teeme?  
+V: Saadad ja saad vastu andmeid; Standardiseeritud ja automatiseeritud kiired vastamised
+
+
+Query parameter on kogu see, mis jääb üsimärgist paemale poole  -   http://some.url/?action=delete  
+parameetritega näed sama lehte, kui nt saadad sõbrale lingi, kuid kui võtad parameetrid ära, võib tal olla tühi leht.
+
+Path on siis, kui pole query parameetreid
+
+parameetreid võid saada nt nii, et leida see kindel parameeter: const name = url.searchParams.get('name') ?? null;  (kui kasutad "null" siis ei tule tyhi leht, ega midagi, vaid tuleb null ehk et see puudub) 
+
+null-a special marker and keyword in SQL indicating that a data value does not exist, is not known, or is missing
+
+
+****************************************************************
+class HomeController {
+//url.get ("action")
+      public Task<Item> Get([FromQuery] string action) {
+
+    return new Item();
+ }
+}
+
+****************************************************************
+
+
+req ja res    ehk request ja respond
+
+----client ja request
+----server ja respond
+
