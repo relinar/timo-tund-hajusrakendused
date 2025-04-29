@@ -1,0 +1,20 @@
+OWASP top 10 - seotud it systeemidega, seotud back-endiga
+
+1.SQL Injection - 
+SELECT * FROM products WHERE name='C vitamiin';
+C vitamiin'; UPDATE users Set (password='') WHERE role='admin'; --
+
+2.Broken Authentication
+3.Sensitive Data Exposure / Broken Access Control / brute Force / Directory Traversing
+
+
+http://site.com/invoices/invoice-4286305692-as6tq87wthuigs.pdf
+
+
+rate limiting, plugin, middleware
+IP based rate limiting, 100 login per 1 minute
+
+
+4.Security misconfiguration (CORS)
+
+comments, reviews, 
